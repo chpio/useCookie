@@ -15,8 +15,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "babel index.js -d dist && cp index.d.ts dist/index.d.ts",
-    "prepublishOnly": "npm run build",
+    "prepare": "babel index.js -d dist && cp index.d.ts dist/index.d.ts",
     "test": "jest"
   },
   "peerDependencies": {
