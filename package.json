@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepare": "babel index.js -d dist && cp index.d.ts dist/index.d.ts",
+    "prepare": "babel src/index.js --out-file index.js",
     "test": "jest"
   },
   "peerDependencies": {
