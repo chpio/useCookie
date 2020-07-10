@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export const setCookie = (name, value, options) => {
   const optionsWithDefaults = {
@@ -26,15 +26,23 @@ export const getCookie = (name) => {
   }, '');
 };
 
-export default function (key, initialValue) {
-  const [item, setItem] = useState(() => {
-    return getCookie(key) || initialValue;
-  });
+export default function useCookie(key, initialValue) {
+  const [item, setItem] = useState(initialValue);
 
-  const updateItem = (value, options) => {
-    setItem(value);
-    setCookie(key, value, options);
-  };
+  useEffect(
+    () => {
+      setItem(getCookie(key));
+    },
+    [key],
+  );
+
+  const updateItem = useCallback(
+    (value, options) => {
+      setItem(value);
+      setCookie(key, value, options);
+    },
+    [key],
+  );
 
   return [item, updateItem];
 }
