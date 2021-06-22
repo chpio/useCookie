@@ -21,15 +21,15 @@ yarn add @neonaut/use-cookie
 ### `useCookie`
 
 ```jsx
-import useCookie from '@neonaut/use-cookie';
+import useCookie from "@neonaut/use-cookie";
 
 export default function MyComponent(props) {
-  const [userToken, setUserToken] = useCookie('token');
+  const [userToken, setUserToken] = useCookie("token");
 
   return (
     <div>
       <p>{userToken}</p>
-      <button onClick={() => setUserToken('123')}>Change token</button>
+      <button onClick={() => setUserToken("123")}>Change token</button>
     </div>
   );
 }
@@ -47,10 +47,10 @@ If you need to access a cookie outside of a React component, you can use the
 named `getCookie` export:
 
 ```js
-import { getCookie } from '@neonaut/use-cookie';
+import { getCookie } from "@neonaut/use-cookie";
 
 function getUser() {
-  const xsrfToken = getCookie('XSRF-TOKEN');
+  const xsrfToken = getCookie("XSRF-TOKEN");
   // use to call your API etc
 }
 ```
@@ -61,10 +61,10 @@ If you need to set a cookie outside of a React component, you can use the
 named `setCookie` export:
 
 ```js
-import { setCookie } from '@neonaut/use-cookie';
+import { setCookie } from "@neonaut/use-cookie";
 
 function saveLocale(locale) {
-  setCookie('locale', locale);
+  setCookie("locale", locale);
 }
 ```
 
@@ -75,7 +75,7 @@ above:
 {
   // The number of days the cookie is stored (defaults to 7)
   days?: number;
-  // The path of the cookie (defaults to '/')
+  // The path of the cookie (defaults to "/")
   path?: string;
 }
 ```
