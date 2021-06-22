@@ -6,7 +6,7 @@ let
     };
 in
     pkgs.stdenv.mkDerivation {
-        name = "react-use-cookie";
+        name = "neonaut-use-cookie";
         buildInputs = [
             nodejs
         ];

@@ -1,19 +1,19 @@
 # useCookie
 
-[![npm package][npm-badge]][npm]
+[on npm](https://www.npmjs.org/package/@neonaut/use-cookie)
 
 A React hook for managing cookies with no dependencies.
 
 ## Installation
 
 ```bash
-npm install react-use-cookie
+npm install @neonaut/use-cookie
 ```
 
 or
 
 ```bash
-yarn add react-use-cookie
+yarn add @neonaut/use-cookie
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ yarn add react-use-cookie
 ### `useCookie`
 
 ```jsx
-import useCookie from 'react-use-cookie';
+import useCookie from '@neonaut/use-cookie';
 
 export default function MyComponent(props) {
   const [userToken, setUserToken] = useCookie('token');
@@ -47,7 +47,7 @@ If you need to access a cookie outside of a React component, you can use the
 named `getCookie` export:
 
 ```js
-import { getCookie } from 'react-use-cookie';
+import { getCookie } from '@neonaut/use-cookie';
 
 function getUser() {
   const xsrfToken = getCookie('XSRF-TOKEN');
@@ -61,7 +61,7 @@ If you need to set a cookie outside of a React component, you can use the
 named `setCookie` export:
 
 ```js
-import { setCookie } from 'react-use-cookie';
+import { setCookie } from '@neonaut/use-cookie';
 
 function saveLocale(locale) {
   setCookie('locale', locale);
@@ -79,6 +79,3 @@ above:
   path?: string;
 }
 ```
-
-[npm-badge]: https://img.shields.io/npm/v/react-use-cookie.svg
-[npm]: https://www.npmjs.org/package/react-use-cookie

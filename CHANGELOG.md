@@ -8,6 +8,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 - Removed `initialValue` argument
 - Fixed hydration mismatch between SSR & browser rendering
 - Rewritten in *typescript*
+- Package renamed to "@neonaut/use-cookie"
 
 ## [v1.2.1](https://github.com/tylerwolff/useCookie/releases/tag/v1.2.1) (2020-10-27)
 
