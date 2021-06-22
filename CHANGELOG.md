@@ -3,7 +3,7 @@
 All notable changes to this project will be documented here. This project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## unreleased
+## v2.0.0-alpha.0
 
 - Removed `initialValue` argument
 - Fixed hydration mismatch between SSR & browser rendering
